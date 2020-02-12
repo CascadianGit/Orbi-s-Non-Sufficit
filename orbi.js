@@ -3,7 +3,7 @@
 var global=new Object();
 //global.orbiAddress="192.168.86.99";
 var listeningPort=8886;
-//var myIPaddress="192.168.86.3";
+//var myAddress="192.168.86.3";
 var targetPartition='';
 
 if ( ! global.password ) {
@@ -42,7 +42,7 @@ function initialize() {
 	    [ './ons-payload' ]
 	).then(_ => {
 	    nc.port(listeningPort).serve('ons-payload.tar.gz').listen();
-	    console.log('serving on '+myIPaddress+':'+listeningPort);
+	    console.log('serving on '+myAddress+':'+listeningPort);
 	} );
     }
     function initialPartitionDetect(myAddress,listeningPort,callback) {
